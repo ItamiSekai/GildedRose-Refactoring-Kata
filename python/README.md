@@ -1,41 +1,41 @@
 # Mini Relatório - Gilded Rose - Refatoração
-## Nome: Gabriel Gomes Nogueira (GU3055361)    Nome: Samuel Vitalino Leite (GU3056457)
-## Disciplina: Engenharia de Software
+### Nome: Gabriel Gomes Nogueira (GU3055361)    Nome: Samuel Vitalino Leite (GU3056457)
+### Disciplina: Engenharia de Software
 
 ## Descrição da atividade
 
 Este projeto consiste em realizar a refatoração do código original do sistema Gilded Rose, que gerencia o estoque de uma loja com diversos tipos de itens. O código original apresentava uma função update_quality com diversas condições aninhadas e de difícil manutenção. O objetivo foi tornar o código mais claro, modularizado e fácil de entender, além de implementar a regra adicional para os itens Conjured.
 
 ## Processo de refatoração
-- As principais mudanças realizadas foram:
+As principais mudanças realizadas foram:
 
-Separação do comportamento por tipo de item dentro do método update_item_quality, alterando o item conforme o necessário, retirando todos aqueles "if" desnecessários. Deixando mais simples e legível, dividindo em pequenos métodos. Como estes abaixo.
+- Separação do comportamento por tipo de item dentro do método update_item_quality, alterando o item conforme o necessário, retirando todos aqueles "if" desnecessários. Deixando mais simples e legível, dividindo em pequenos métodos. Como estes abaixo.
 
-- Criação de métodos auxiliares para cada comportamento específico:
+Criação de métodos auxiliares para cada comportamento específico:
 
-update_aged_brie
+- update_aged_brie
 
-update_backstage_pass
+- update_backstage_pass
 
-update_conjured_item
+- update_conjured_item
 
-update_normal_item
+- update_normal_item
 
-- Criação dos métodos utilitários:
+Criação dos métodos utilitários:
 
-increase_quality
+- increase_quality
 
-decrease_quality
+- decrease_quality
 
-- Implementação da regra para Conjured:
+Implementação da regra para Conjured:
 
-Itens cujo nome começa com "Conjured" passam a perder qualidade duas vezes mais rápido que os itens normais. Assim como havia sido descrito na atividade.
+- Itens cujo nome começa com "Conjured" passam a perder qualidade duas vezes mais rápido que os itens normais. Assim como havia sido descrito na atividade.
 
-- Preservação das regras gerais do sistema:
+Preservação das regras gerais do sistema:
 
-Qualidade mínima = 0
+- Qualidade mínima = 0
 
-Qualidade máxima = 50 (exceto Sulfuras, que é fixo)
+- Qualidade máxima = 50 (exceto Sulfuras, que é fixo)
 
 
 ## Dificuldades encontradas
